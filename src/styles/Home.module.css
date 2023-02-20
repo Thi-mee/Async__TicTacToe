@@ -1,0 +1,134 @@
+.Homecontainer {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: .5rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.Homecontainer h1 {
+  font-size: 5rem;
+  color: #333;
+  text-align: center;
+  line-height: 1.2;
+}
+.Homecontainer h1 span {
+  color: rgb(255, 25, 0);
+  display: block;
+  font-size: 3rem;
+}
+
+
+
+.Room .container {
+  padding-inline: 7rem;
+}
+.TopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #f1f1f1;
+}
+.TopBar h2 {
+  margin: 0;
+}
+.ul {
+  padding: 0;
+  list-style: none;
+}
+.ul li {
+  width: 90%;
+  margin: 0 auto;
+}
+.ul a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  /* color: #333; */
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color .15s ease-in-out;
+  padding: 2rem 2rem;
+  background-color: #fff;
+  margin-bottom: 1rem;
+}
+.ul a:first {
+  margin-top: 2em;
+}
+.ul a:hover,
+.ul a:focus {
+  color: #f00;
+  background-color: #eee;
+}
+.ul .green {
+  color: #0bb70b;
+}
+.ul .red {
+  color: rgb(188, 77, 77);
+}
+
+
+.Buttons {
+  display: grid;
+  gap: 1rem;
+}
+.Buttons button {
+  display: block;
+  color: white;
+  background-color: #333;
+  width: 100%;
+  text-decoration: none;
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: .7rem;
+  border: 1px solid #333;
+  transition: background-color .15s ease-in-out, color .15s ease-in-out;
+  cursor: pointer;
+}
+.Buttons button:hover,
+.Buttons button:focus {
+  background-color: rgb(220, 220, 220);
+  color: rgb(17, 17, 17);
+}
+.Buttons button:first-child {
+  background-color: #ffffff;
+  color: #000;
+}
+.Buttons button:first-child:hover,
+.Buttons button:first-child:focus {
+  background-color: #333;
+  color: #fff;
+}
+
+
+
+.new {
+  font-size: 4rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #e95a1d;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5),
+              inset 2px 2px 5px rgba(255, 255, 255, 0.3),
+              inset -2px -2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform .15s ease-in-out;
+}
+.new:hover {
+  transform: scale(1.1);
+}

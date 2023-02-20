@@ -1,0 +1,91 @@
+.LoaderOverLay {
+  position: fixed;
+  inset: 0;
+  background-color: rgb(141, 216, 233);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+.PopupOverLay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+.Popup {
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 3001;
+}
+
+
+
+
+
+.BigBox {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(141, 216, 233);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: boxroll 1500ms linear infinite forwards;
+  box-shadow: 0px 0px 2px 6px rgba(137, 137, 205, 0.689), 0px 0px 2px 8px rgba(249, 130, 130, 0.538);
+}
+.SmallBox {
+  width: 50px;
+  height: 50px;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 2%,
+    rgb(255, 112, 210) 100%
+  );
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center;
+  animation: ballroll 1500ms linear infinite forwards;
+}
+@keyframes boxroll {
+  0% {
+    /* transform: translateX(-25px); */
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ballroll {
+  0% {
+    transform: translate(-25px, 25px);
+  }
+  25% {
+    transform: translate(25px, 25px);
+  }
+  50% {
+    transform: translate(25px, -25px);
+  }
+  75% {
+    transform: translate(-25px, -25px);
+  }
+  100% {
+    transform: translate(-25px, 25px);
+  }
+}

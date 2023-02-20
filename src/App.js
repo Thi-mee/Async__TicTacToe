@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, createContext } from "react";
+import { Routes, Route } from "react-router-dom";
+import GameRoom from "./pages/GameRoom";
+import Home from "./pages/Home";
+import Room from "./pages/Room";
+
+export const UserContext = createContext()
 
 function App() {
+  const [user, setUser] = useState(null);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={{user, setUser}} >
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Room />} />
+      <Route path="/gameroom/:id" element={<GameRoom />} />
+
+
+      TODO: Redirect known routes to login page if user is not logged in
+
+
+      <Route path='*' element={<h1>404 - Not Found</h1>} />
+    </Routes>
+    </UserContext.Provider>
   );
 }
 
