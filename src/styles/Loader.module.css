@@ -18,7 +18,9 @@
   z-index: 3000;
 }
 .Popup {
-  width: 300px;
+  min-width: 300px;
+  width: 60%;
+  max-width: 500px;
   height: 300px;
   background-color: #fff;
   border-radius: 10px;
@@ -29,6 +31,41 @@
   position: relative;
   z-index: 3001;
 }
+
+.Popup .Close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+  background-color: #e9201d;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.15s ease-in-out;
+}
+.Popup .Close:hover {
+  transform: scale(1.1);
+}
+.Popup .Close::before,
+.Popup .Close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background-color: #fff;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.Popup .Close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 
 
 

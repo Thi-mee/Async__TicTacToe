@@ -1,0 +1,65 @@
+.LoginForm {
+  width: 50%;
+  margin-inline: auto;
+  margin-top: 10%;
+  background-color: #f1f1f1;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.LoginForm h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.FormGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.FormGroup label {
+  font-size: 1.5rem;
+  color: #336d;
+  margin-bottom: 0.5rem;
+}
+.FormGroup input[type="email"],
+.FormGroup input[type="password"] {
+  padding: 1rem;
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  outline: none;
+}
+.FormGroup input[type="email"]:focus,
+.FormGroup input[type="password"]:focus {
+  border-color: #336d;
+}
+
+.Positioner {
+  position: relative;
+  height: 6rem;
+}
+
+.Positioner input[type="submit"] {
+  position: absolute;
+  right: 0;
+  padding: 1rem 1.8rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  background-color: #336d;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.Positioner input[type="submit"]:hover,
+.Positioner input[type="submit"]:focus {
+  background-color: #2a5a9c;
+}
+
+.Positioner input[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
